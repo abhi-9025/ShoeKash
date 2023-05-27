@@ -6,14 +6,17 @@ import ShoppingCart from "./screens/ShoppingCart";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { AntDesign } from "@expo/vector-icons";
 import { Pressable,Text } from "react-native";
+import { useSelector } from "react-redux";
+import { selectNumberOfItems } from "./store/cartSlice";
 const Stack = createNativeStackNavigator();
-
  const HeaderRight=()=>{
     const navigation=useNavigation();
+    const NumberOfItems=useSelector(selectNumberOfItems)
+
     return (
             <Pressable onPress={()=>navigation.navigate('Cart')} style={{flexDirection:'row'}}>
                 <AntDesign name="shoppingcart" size={18} color="gray" />
-                <Text style={{marginLeft:5,fontWeight:'500'}}>5</Text>
+                <Text style={{marginLeft:5,fontWeight:'500'}}>{NumberOfItems}</Text>
               </Pressable>
     )
  }
