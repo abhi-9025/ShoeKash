@@ -9,10 +9,11 @@ import {
   Pressable
 } from "react-native";
 import products from "../data/products";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { useSelector } from "react-redux";
+
 
 const ProductDetailsScreen = () => {
-  const product = products[0];
+  const product=useSelector(state=>state.products.selectedProduct)
   const { width } = useWindowDimensions();
   const addToCart=()=>{
     console.warn("Add to cart");
