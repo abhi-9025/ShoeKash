@@ -4,23 +4,28 @@ import CartListItem from '../components/CartListItem'
 import cart from "../data/cart"
 
 const ShoppingCartTotal=()=>{
-<View style={styles.totalConatiner}>
-        <View style={styles.row}>
-           <Text style={styles.text}>Subtotal</Text>
-           <Text style={styles.text}>1500 INR</Text>
-        </View>
-        <View style={styles.row}>
-           <Text style={styles.text}>Delivery</Text>
-           <Text style={styles.text}>100 INR</Text>
-        </View>
-        <View style={styles.row}>
-           <Text style={styles.textBold}>Total</Text>
-           <Text style={styles.textBold}>1600 INR</Text>
-        </View>
-    </View>
-}
+  return(
+  <View style={styles.totalConatiner}>
+          <View style={styles.row}>
+             <Text style={styles.text}>Subtotal</Text>
+             <Text style={styles.text}>1500 INR</Text>
+          </View>
+          <View style={styles.row}>
+             <Text style={styles.text}>Delivery</Text>
+             <Text style={styles.text}>100 INR</Text>
+          </View>
+          <View style={styles.row}>
+             <Text style={styles.textBold}>Total</Text>
+             <Text style={styles.textBold}>1600 INR</Text>
+          </View>
+      </View>
+  )
+  }
 
 const ShoppingCart = () => {
+
+  
+
   return (
     <>
     <FlatList 
